@@ -601,4 +601,50 @@ table td{
     display: inline-block;
 }
 
+.detail-acc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: stretch;
+}
+
+.detail-acc .data-right{
+    padding-left: 15px;
+}
+
+.detail-acc .right .item-detail{
+    width: 100%;
+}
+
+.data-meta .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data-meta .item-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 0;
+    border-bottom: 1px solid rgb(29, 97, 149);
+}
+
+.data-meta .item-meta b{
+    color: rgb(29, 97, 149);
+}
+
+.bleft{
+    padding: 1px 4px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgb(29, 97, 149);
+    color: white !important;
+}
+
+.bright{
+    padding: 1px 4px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgb(36, 152, 36);
+    color: white !important;
+}
+
 /* ACCOUNT CONTENT END */

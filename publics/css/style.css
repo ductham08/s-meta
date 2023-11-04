@@ -1,0 +1,604 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.nav-right {
+    width: 60px;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s;
+    overflow: auto;
+    padding: 8px;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1) !important;
+}
+
+.nav-right.active {
+    width: 250px;
+    transition: 0.35s ease-in-out;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    padding: 24px !important;
+    overflow: hidden;
+    background-color: rgb(242, 242, 242);
+}
+
+/* NAV */
+
+.nav-right .logo{
+    padding: 5px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.nav-right svg{
+    width: 20px !important;
+    margin: 7px auto;
+    height: 20px !important;
+}
+
+.nav-right a{
+    padding: 5px 0;
+    text-align: center;
+}
+
+.nav-right .item-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* NAV END */
+
+/* CONTENT START */
+
+.content .nav-content svg{
+    width: 25px !important;
+    margin: 5px;
+    height: 25px !important;
+}
+
+.content .nav-content{
+    padding: 5px !important;
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .nav-content p{
+    margin: 0;
+}
+
+.content .nav-content .btn-nav-content{
+    cursor: pointer;
+}
+
+.content .nav-content .act{
+    display: none;
+}
+
+.content .nav-content.active .def{
+    display: none;
+}
+
+.content .nav-content.active .act{
+    display: block;
+}
+
+.content .nav-content .item-nav-content{
+    margin: 5px 0;
+    width: 100%;
+}
+
+.content .nav-content .item-nav-content.active{
+    background-color: #AAC9FF;
+    border-radius: 7px;
+}
+
+.content .nav-content .item-nav-content.active p{
+    font-weight: 700;
+    color: rgba(24,119,242,1);
+}
+
+.content .nav-content .item-nav-content.active svg path{
+    fill: rgba(24,119,242,1);
+}
+
+.content .nav-content .item-nav-content a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: black;
+}
+
+.content .nav-content.active{
+    padding: 5px  10px;
+    display: flex;
+    width: 230px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.main-content .content-main{
+    padding: 0 20px ;
+    width: 100%;
+}
+
+.main-content .content-main .head{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.main-content .content-main .head h5{
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    color: rgba(0,0,0,.75);
+}
+
+.main-content .content-main .head .right{
+    width: max-content;
+}
+
+.main-content .content-main .head .setting-payment{
+    background-color: #e6e6e6;
+    border-radius: 7px;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.main-content .right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.main-content .select-option{
+    margin-left: 15px;
+    width: 285px; 
+    position: relative;
+}
+
+.main-content .select-option .drop{
+    padding: 5px 10px;
+    /* border: 1px solid rgba(0, 0, 0, .1); */
+    border: 1px solid #AAC9FF;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.main-content .select-option .drop .icon{
+    margin-left: 10px;
+}
+
+.main-content .select-option .drop #selcted{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 285px; 
+    max-width: 285px;
+}
+
+.main-content .select-option .option{
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 7px;
+    display: flex;
+    height: 280px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    z-index: 0;
+}
+
+.main-content .select-option .option.active{
+    display: block;
+    z-index: 5;
+}
+
+.main-content .select-option .option .list-option{
+    overflow: auto;
+    padding: 5px;
+    height: min-content;
+    max-height: 70%;
+}
+
+.main-content .select-option .option .list-option::-webkit-scrollbar{
+    display: none;
+}
+
+.main-content .select-option .option .item-option{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 285px;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+.main-content .select-option .option .item-option label{
+    cursor: pointer;
+}
+
+.main-content .select-option .option .bottom{
+    font-size: 12px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.main-content .select-option .option .bottom a{
+    text-decoration: none;
+}
+
+.main-content .select-option .option .search{
+    border-bottom: 1px solid #e6e6e6;
+    padding: 5px 10px;
+}
+
+.main-content .select-option .option .search input{
+    outline: none;
+    border: none;
+}
+
+.main-content .select-option .option .item-option p{
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    letter-spacing: normal;
+    width: 100%;
+    overflow-wrap: normal;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0;
+    margin-left: 7px;
+}
+
+.main-content .select-option .option .item-option:hover{
+    background-color: gainsboro;
+    border-radius: 7px;
+}
+
+.main-content .select-option .option .item-option input{
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    opacity: 1;
+    outline: gainsboro;
+    top: 0;
+    border: 1px solid #e6e6e6;
+}
+
+.main-content .select-option .option .item-option p.id,
+.main-content .select-option .option .item-option p.owned{
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.main-content .select-option .option .item-option p.owned{
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 0px 2px;
+}
+
+/* MAIN TABLE */
+.main-table{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #e6e6e6
+}
+
+.main-table .head-table{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.main-table .head-table .item-head-table{
+    border-radius: 7px;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.main-table .head-table .item-head-table:hover{
+    background-color: #e6e6e6;
+}
+
+.main-table .head-table .item-head-table.active{
+    background-color: #AAC9FF;
+    font-weight: 700;
+    color: rgba(24,119,242,1);
+}
+
+.main-table .account{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.main-table .account .pay{
+    border-radius: 7px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-right: 10px;
+    background-color: #AAC9FF;
+    font-weight: 700;
+    color: rgb(93, 158, 243);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-table .account .pay.active{
+    cursor: pointer;
+    color: rgba(24,119,242,1);
+}
+
+.main-table .account .buy{
+    text-align: right;
+    font-size: 18px;
+}
+
+.main-table .account .right{
+    text-align: right;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.main-table .account .right p{
+    font-size: 13px;
+}
+
+.main-table .search{
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.main-table .search select{
+    background-color: gainsboro;
+    padding: 5px 15px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+
+.pick-date{
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pick-date svg{
+    width: 22px !important;
+    height: 22px !important;
+    margin-right: 7px;
+}
+
+.pick-date input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.action{
+    cursor: pointer;
+}
+
+.action svg{
+    width: 23px !important;
+    height: 23px !important;
+    margin-right: 7px;
+}
+
+.main-table .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-table .search .right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-table .search .input-search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    border: 1px solid #e6e6e6;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #e6e6e6;
+    padding: 3px 7px;
+}
+
+.main-table .search input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.main-table .data{
+    margin-top: 15px;
+}
+
+.visa{
+    display: flex;
+    align-items: center;
+}
+
+.visa p{
+    font-size: 14px;
+    padding-left: 2px;
+}
+
+.visa img{
+    width: 30px;
+}
+
+.paid{
+    font-size: 12px;
+    color: rgba(57,115,0,1);
+    background-color: rgba(218,242,194,1);
+    padding: 2px 7px;
+    border-radius: 50px;
+}
+
+.failed{
+    font-size: 12px;
+    color: rgba(153,26,0,1);
+    background-color: rgba(255,234,230,1);
+    padding: 2px 7px;
+    border-radius: 50px;
+}
+
+.transaction{
+    color: rgba(20,97,204,1);
+    padding-left: 15px;
+}
+
+table td{
+    vertical-align: middle;
+}
+
+.dowload{
+    background-color: gainsboro;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* CONTENT END */
+
+
+/* ACCOUNT CONTENT START */
+
+.main-account .item-detail .title-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.main-account .item-detail{
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+}
+
+.main-account .item-detail .money b{
+    font-size: 22px;
+}
+
+.main-account .item-detail .money p{
+    font-size: 13px;
+}
+
+.main-account .item-detail .visa b{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.main-account .item-detail .visa p{
+    margin-left: 10px;
+    padding: 0;
+}
+
+.main-account .item-detail .detail-money{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #e6e6e680;
+    border-radius: 7px;
+}
+
+.min12{
+    font-size: 12px;
+}
+
+.min13{
+    font-size: 13px;
+}
+
+.min15{
+    font-size: 15px;
+}
+
+.data-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-info .item{
+    display: inline-block;
+}
+
+/* ACCOUNT CONTENT END */

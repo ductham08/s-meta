@@ -647,4 +647,134 @@ table td{
     color: white !important;
 }
 
+.w-7{
+    width: 70%;
+}
+
+.w-3{
+    width: 30%;
+}
+
 /* ACCOUNT CONTENT END */
+
+@media (max-width: 1024px) {
+    h5{
+        font-size: 1rem;
+    }
+
+    .content .nav-content svg{
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .action svg{
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .main-table .search .input-search{
+        font-size: 8px;
+    }
+
+    .pick-date{
+        font-size: 8px;
+    }
+
+    p, 
+    b, 
+    .item-head-table, 
+    .setting-payment,
+    #selcted{
+        font-size: 8px !important;
+    }
+
+    .main-content .select-option .drop #selcted{
+        width: 70px;
+    }
+
+    .main-content .select-option{
+        width: min-content;
+    }
+
+    .main-content .select-option .drop{
+        padding: 2px 5px;
+    }
+    
+    .main-table .account .pay{
+        padding: 2px 5px !important;
+        font-size: 8px !important;
+    }
+
+    .main-table .search select{
+        font-size: 8px;
+    }
+
+    table td,
+    table th{
+        font-size: 6px !important;
+    }
+
+    .min12{
+        font-size: 4px !important;
+    }
+
+    .min13{
+        font-size:6px !important;
+    }
+
+    .min15{
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    h5{
+        font-size: 0.5rem;
+    }
+
+    .content .nav-content svg{
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+    p, b, .item-head-table{
+        font-size: 5px !important;
+    }
+
+    table td,
+    table th{
+        font-size: 5px !important;
+    }
+
+    .min12{
+        font-size: 3px !important;
+    }
+
+    .min13{
+        font-size:4px !important;
+    }
+
+    .min15{
+        font-size: 5px !important;
+    }
+
+    .main-account .item-detail{
+        padding: 2px 5px;
+    }
+
+    .main-account .item-detail .title-detail{
+        margin-bottom: 3px;
+    }
+
+    .visa img{
+        width: 15px;
+    }
+
+    .content{
+        padding: 5px !important;
+    }
+
+    .main-content .content-main{
+        padding: 0 5px !important;
+    }
+}

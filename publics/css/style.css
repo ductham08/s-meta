@@ -161,6 +161,7 @@ p{
 .main-content .content-main{
     padding: 0 20px ;
     width: 100%;
+    max-width: 1024px;
 }
 
 .main-content .content-main .head{

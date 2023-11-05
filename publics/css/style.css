@@ -158,10 +158,19 @@ p{
     justify-content: flex-start;
 }
 
+.account-detail-data{
+    max-width: 1024px;
+    
+}
+
+.account-detail-data::-webkit-scrollbar{
+    display: none;
+}
+
 .main-content .content-main{
     padding: 0 20px ;
     width: 100%;
-    max-width: 1024px;
+    
 }
 
 .main-content .content-main .head{
